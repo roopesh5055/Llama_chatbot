@@ -20,12 +20,11 @@ prompt=ChatPromptTemplate.from_messages(
     ]
 )
 
-## streamlit framework
-
-st.title('Langchain Demo With LLAMA3')
+## streamlit
+st.title('Langchain Chatbot With LLAMA3')
 input_text=st.text_input("Chat with me")
 
-# ollama LLAma2 LLm 
+# ollama LLAma3 LLm 
 llm=Ollama(model="llama3")
 output_parser=StrOutputParser()
 chain=prompt|llm|output_parser
